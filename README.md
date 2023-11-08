@@ -15,8 +15,8 @@
 6. **상관관계 분석**: 음성과 뇌파 데이터 간 상관 계수 계산 및 데이터 시각화
 7. **모델링 및 해석**: 뇌파와 음성 패턴의 연관성 모델링 및 인사이트 도출
 
-## 라이센스
-이 프로젝트는 MIT 라이센스를 따릅니다. 자세한 내용은 `LICENSE` 파일을 참조해 주세요.
+## 분석 과정
+여력이 된다면 [개인 티스토리](https://what-i-want-to-do.tistory.com/)에 과정을 올리고자 합니다.
 
 ## 참고 문헌
 - Kara One 뇌파 데이터셋: [Toronto University Complingweb](https://www.cs.toronto.edu/~complingweb/data/karaOne/karaOne.html)
