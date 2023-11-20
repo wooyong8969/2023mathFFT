@@ -1,16 +1,14 @@
-function Y = FFT_function(x)
-    N = length(x);
-    if N <= 1
-        Y = x;
-    else
-        % 짝수와 홀수 인덱스 요소 분리
-        even = FFT_function(x(1:2:end));
-        odd = FFT_function(x(2:2:end));
-        
-        % 단위근의 계수 계산
-        factor = exp(-2j * pi * (0:N/2-1) / N);
-        
-        % FFT 결과 합치기
-        Y = [even + factor .* odd, even - factor .* odd];
+function X = DFT_function(x)
+    N = length(x); % 신호 x의 길이 N
+    X = zeros(N, 1); % 변환 결과를 저장할 벡터 X 초기화
+    
+    for k = 1:N
+        sum = 0;
+        for n = 1:N
+            % 삼각함수와 복소수의 관계를 사용하여 푸리에 계수 계산
+            angle = -2 * pi * (n-1) * (k-1) / N;
+            sum = sum + x(n) * (cos(angle) + 1i * sin(angle)); % e^(i*theta) = cos(theta) + i*sin(theta)
+        end
+        X(k) = sum;
     end
 end
